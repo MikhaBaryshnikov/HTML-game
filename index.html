@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click the Button Game</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            padding: 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        #score {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button id="clickButton">Click me!</button>
+        <div id="score">Score: 0</div>
+    </div>
+    <script>
+        let score = 0;
+        document.getElementById('clickButton').addEventListener('click', function() {
+            score++;
+            document.getElementById('score').innerText = 'Score: ' + score;
+        });
+    </script>
+</body>
+</html>
